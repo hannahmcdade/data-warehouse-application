@@ -10,11 +10,16 @@
 <body class="container">
   <!-- header -->
   <header>
-
-    <ul class="nav nav-tabs">
+    
+    <ul class="nav nav-pills">
         <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
         <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
-        <li><a href="/login" target="_self">Logout</a></li>
+        <li class="pull-right">
+          <a class="btn btn-default btn-sm" href="/login" target="_self">
+            <span class="glyphicon glyphicon-log-out"></span>
+            Logout
+          </a>
+        </li>
     </ul>
     <div class="flash-message" ng-if="flash">
         <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
