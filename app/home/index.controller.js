@@ -10,13 +10,13 @@
     $scope.results = (function() {
       var results = null;
       $.ajax({
-          'async': false,
-          'global': false,
-          'url': "dataApi/results.json",
-          'dataType': "json",
-          'success': function (data) {
-              results = data;
-          }
+        'async': false,
+        'global': false,
+        'url': "dataApi/results.json",
+        'dataType': "json",
+        'success': function (data) {
+            results = data;
+        }
       });
       return results;
     })();
