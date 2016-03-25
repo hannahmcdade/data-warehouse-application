@@ -1,0 +1,5 @@
+{
+  "connectionString": "localhost:27017/data-warehouse-app-front-end",
+  "apiUrl": "http://localhost:3000/api",
+  "secret": "MSc Software Development Dissertation"
+}
