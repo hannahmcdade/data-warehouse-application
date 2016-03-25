@@ -1,5 +1,5 @@
 <h1></h1>
-<h1>Hello {{vm.user.firstName}} {{vm.user.lastName}}</h1>
+<h1>Hi {{vm.user.firstName}} {{vm.user.lastName}}</h1>
 
 <table class="table table-bordered">
 
@@ -10,7 +10,12 @@
     <td>date</td>
   </tr>
 
-  <tr data-ng-repeat="result in results = results">
+  <tr data-ng-repeat="result in results = results"
+      ng-class="{
+        danger: result.status == 'Erred',
+        success: result.status == 'Complete',
+        warning: result.status == 'Overridden'
+      }">
     <td>{{result.status}}</td>
     <td>{{result.row_count}}</td>
     <td>{{result.files_distributed | uppercase}}</td>
