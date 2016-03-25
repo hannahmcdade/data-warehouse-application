@@ -1,1 +1,19 @@
+<h1></h1>
 <h1>Hello {{vm.user.firstName}} {{vm.user.lastName}}</h1>
+
+<table class="table table-bordered">
+
+  <tr>
+    <td>status</td>
+    <td>row_count</td>
+    <td>files_distributed</td>
+    <td>date</td>
+  </tr>
+
+  <tr data-ng-repeat="result in results = results">
+    <td>{{result.status}}</td>
+    <td>{{result.row_count}}</td>
+    <td>{{result.files_distributed | uppercase}}</td>
+    <td>{{result.date}}</td>
+  </tr>
+</table>
