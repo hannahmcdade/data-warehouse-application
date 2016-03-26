@@ -47,6 +47,7 @@
 
     $scope.labels = uniqueStatus;
     $scope.data = uniqueStatusCount;
+    $scope.colours = ['#DC143C', '#FFFF00', '#00FF00'];
 
     $scope.onClick = function (points, evt) {
       console.log(points, evt);
