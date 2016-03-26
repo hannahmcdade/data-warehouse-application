@@ -1,0 +1,23 @@
+{
+  "name": "data-warehouse-app",
+  "description": "Front end for a Datawarehouse Application",
+  "main": "",
+  "authors": [
+    "HannahMcDade <hmcdade01@qub.ac.uk>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hannahmcdade/data-warehouse-app",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-chart.js": "^0.9.0",
+    "Chart.js": "^1.0.2"
+  }
+}

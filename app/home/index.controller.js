@@ -42,8 +42,7 @@
       UserService.GetCurrent().then(function(user) {
         vm.user = user;
       });
-      console.log('printing the json data');
-      console.log($scope.results);
+
     }
   }]);
 }());

@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('app', ['ui.router'])
+  angular.module('app', ['ui.router', 'chart.js'])
   .config(config)
   .run(run);
 
@@ -23,6 +23,13 @@
       controller: 'Account.IndexController',
       controllerAs: 'vm',
       data: {activeTab: 'account'}
+    })
+    .state('metrics', {
+      url: '/metrics',
+      templateUrl: 'metrics/index.html',
+      controller: 'Metrics.IndexController',
+      controllerAs: 'vm',
+      data: {activeTab: 'metrics'}
     });
   }
 
