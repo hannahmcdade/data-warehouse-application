@@ -1,0 +1,21 @@
+<!-- header -->
+<header ng-app="app" ng-controller="Header.IndexController">
+
+  <ul class="nav nav-pills">
+      <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
+      <li ng-class="{active: activeTab === 'metrics'}"><a ui-sref="metrics">Metrics</a></li>
+
+      <li class="pull-right">
+        <a class="btn btn-default btn-sm" href="/login" target="_self">
+          <span class="glyphicon glyphicon-log-out"></span>
+          Logout
+        </a>
+      </li>
+      <li class="pull-right" ng-class="{active: activeTab === 'account'}">
+        <a ui-sref="account">{{vm.user.firstName.toUpperCase()}} {{vm.user.lastName.toUpperCase()}}</a>
+      </li>
+  </ul>
+  <div class="flash-message" ng-if="flash">
+      <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+  </div>
+</header>
