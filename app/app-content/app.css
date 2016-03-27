@@ -2,6 +2,10 @@ body {
   padding: 20px 0;
 }
 
+header {
+  margin-bottom: 20px;
+}
+
 .flash-message {
   margin-top: 20px;
 }

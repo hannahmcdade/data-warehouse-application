@@ -1,31 +1,31 @@
-<h1></h1>
-<h1>Hi {{vm.user.firstName}} {{vm.user.lastName}}</h1>
+<div>
+  <label class="checkbox-inline">
+    <input type="checkbox" value="">Erred</label>
+  <label class="checkbox-inline">
+    <input type="checkbox" value="">Complete</label>
+  <label class="checkbox-inline">
+    <input type="checkbox" value="">Overridden</label>
 
-<label class="checkbox-inline">
-  <input type="checkbox" value="">Erred</label>
-<label class="checkbox-inline">
-  <input type="checkbox" value="">Complete</label>
-<label class="checkbox-inline">
-  <input type="checkbox" value="">Overridden</label>
+  <table class="table table-bordered">
 
-<table class="table table-bordered">
+    <tr>
+      <td>status</td>
+      <td>row_count</td>
+      <td>files_distributed</td>
+      <td>date</td>
+    </tr>
 
-  <tr>
-    <td>status</td>
-    <td>row_count</td>
-    <td>files_distributed</td>
-    <td>date</td>
-  </tr>
-
-  <tr data-ng-repeat="result in results = results"
-      ng-class="{
-        danger: result.status == 'Erred',
-        success: result.status == 'Complete',
-        warning: result.status == 'Overridden'
-      }">
-    <td>{{result.status}}</td>
-    <td>{{result.row_count}}</td>
-    <td>{{result.files_distributed | uppercase}}</td>
-    <td>{{result.date}}</td>
-  </tr>
-</table>
+    <tr data-ng-repeat="result in results = results"
+    class="job-status"
+        ng-class="{
+          danger: result.status == 'Erred',
+          success: result.status == 'Complete',
+          warning: result.status == 'Overridden'
+        }">
+      <td>{{result.status}}</td>
+      <td>{{result.row_count}}</td>
+      <td>{{result.files_distributed | uppercase}}</td>
+      <td>{{result.date}}</td>
+    </tr>
+  </table>
+</div>
