@@ -6,7 +6,7 @@
     // ViewModel - the controller instance variable
     var vm = this;
     vm.user = null;
-    var status = 'status'
+    var status = 'status';
 
     var results = (function() {
       var results = null;

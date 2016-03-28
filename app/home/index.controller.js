@@ -21,6 +21,21 @@
       return results;
     })();
 
+    $scope.filter = {
+      status: ['Erred', 'Complete', 'Overridden']
+    };
+
+    $scope.setFilter = function(type) {
+        // Set the search type
+        var index = $scope.filter.status.indexOf(type);
+        if (index > -1) {
+          $scope.filter.status.splice(index, 1);
+        } else {
+          $scope.filter.status.push(type);
+        }
+        console.log($scope.filter.status);
+    };
+
     initController();
 
     function initController() {
@@ -28,7 +43,6 @@
       UserService.GetCurrent().then(function(user) {
         vm.user = user;
       });
-
     }
   }]);
 }());

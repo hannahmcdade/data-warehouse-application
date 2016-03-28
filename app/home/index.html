@@ -1,10 +1,27 @@
 <div>
-  <label class="checkbox-inline">
-    <input type="checkbox" value="">Erred</label>
-  <label class="checkbox-inline">
-    <input type="checkbox" value="">Complete</label>
-  <label class="checkbox-inline">
-    <input type="checkbox" value="">Overridden</label>
+  <!-- <div>
+    <a class="checkbox-inline" data-ng-click="setFilter('Erred')">
+      <label><input type="checkbox" value="">Erred</label>
+    </a>
+    <a class="checkbox-inline" data-ng-click="setFilter('Complete')">
+      <label><input type="checkbox" value="">Complete</label>
+    </a>
+    <a  class="checkbox-inline" data-ng-click="setFilter('Overridden')">
+      <label><input type="checkbox" value="">Overridden</label>
+    </a>
+  </div> -->
+
+  <div>
+    <a data-ng-click="setFilter('Erred')">
+      <label class="checkbox-inline"><input type="checkbox" value="">Erred</label>
+    </a>
+    <a data-ng-click="setFilter('Complete')">
+      <label class="checkbox-inline" ><input type="checkbox" value="">Complete</label>
+    </a>
+    <a data-ng-click="setFilter('Overridden')">
+      <label class="checkbox-inline" ><input type="checkbox" value="">Overridden</label>
+    </a>
+  </div>
 
   <table class="table table-bordered">
 
@@ -15,8 +32,7 @@
       <td>date</td>
     </tr>
 
-    <tr data-ng-repeat="result in results = results"
-    class="job-status"
+    <tr data-ng-repeat="result in rs = (results | orFilter:filter | orderBy:'date')"
         ng-class="{
           danger: result.status == 'Erred',
           success: result.status == 'Complete',
