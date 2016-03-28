@@ -33,7 +33,6 @@
         } else {
           $scope.filter.status.push(type);
         }
-        console.log($scope.filter.status);
     };
 
     initController();
