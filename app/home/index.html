@@ -25,9 +25,9 @@
 
     <tr data-ng-repeat="result in rs = (results | orFilter:filter | orderBy:'date')"
         ng-class="{
-          danger: result.status == 'Erred',
-          success: result.status == 'Complete',
-          warning: result.status == 'Overridden'
+          table_red: result.status == 'Erred',
+          table_green: result.status == 'Complete',
+          table_amber: result.status == 'Overridden'
         }">
       <td>{{result.status}}</td>
       <td>{{result.row_count}}</td>

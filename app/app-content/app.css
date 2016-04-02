@@ -25,6 +25,18 @@ footer {
   text-align: center;
 }
 
+.table_red {
+  background: #DC143C;
+}
+
+.table_amber {
+  background: #FFC200;
+}
+
+.table_green {
+  background: #00FF00;
+}
+
 .flash-message {
   margin-top: 20px;
 }
