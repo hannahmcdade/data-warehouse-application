@@ -20,6 +20,11 @@ input[type=checkbox] {
   zoom:1.2;
 }
 
+footer {
+  background: #ecf0f1;
+  text-align: center;
+}
+
 .flash-message {
   margin-top: 20px;
 }
