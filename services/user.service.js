@@ -58,12 +58,34 @@ function getById(_id) {
 function create(userParam) {
   var deferred = Q.defer();
 
-  // Validation
+  // function to validate a users email address
+  function validateEmail(email) {
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(email);
+  }
+
+  // function to validate a users password
+  function validatePassword(password) {
+    var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+    return regex.test(password);
+  }
+
+  // ensure a valid email address is input
+  if (!validateEmail(userParam.email)) {
+    deferred.reject('Email "' + userParam.email + '" is not valid');
+  }
+
+  // ensure a valid password is input
+  if (!validateEmail(userParam.password)) {
+    deferred.reject('Password must contain one uppercase, one lowercase, one digit and be at least 8 characters long');
+  }
+
+  // Server side validation - check if email already exists
   usersDb.findOne({ email: userParam.email },function (err, user) {
     if (err) deferred.reject(err);
 
     if (user) {
-    // The email already exists
+      // The email address already exists
       deferred.reject('Email "' + userParam.email + '" is already taken');
     } else {
       createUser();
@@ -99,8 +121,8 @@ function update(_id, userParam) {
         if (err) deferred.reject(err);
 
         if (user) {
-          // email already exists
-          deferred.reject('Email "' + req.body.email + '" is already taken')
+          // Email already exists
+          deferred.reject('Email "' + req.body.email + '" is already in use')
         } else {
           updateUser();
         }
