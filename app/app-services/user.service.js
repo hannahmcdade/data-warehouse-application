@@ -9,7 +9,7 @@
     service.GetCurrent = GetCurrent;
     service.GetAll = GetAll;
     service.GetById = GetById;
-    service.GetByUsername = GetByUsername;
+    service.GetByEmail = GetByEmail;
     service.Create = Create;
     service.Update = Update;
     service.Delete = Delete;
@@ -28,8 +28,8 @@
       return $http.get('/api/users/' + _id).then(handleSuccess, handleError);
     }
 
-    function GetByUsername(username) {
-      return $http.get('/api/users/' + username).then(handleSuccess, handleError);
+    function GetByEmail(email) {
+      return $http.get('/api/users/' + email).then(handleSuccess, handleError);
     }
 
     function Create(user) {

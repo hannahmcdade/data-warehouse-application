@@ -9,14 +9,6 @@ var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 var Q = require('q');
 
-// var service = {
-//   authenticate: authenticate,
-//   getById: getById,
-//   create: create,
-//   update: update,
-//   delete: _delete,
-// };
-
 var service = {};
 
 service.authenticate = authenticate;
@@ -27,10 +19,10 @@ service.delete = _delete;
 
 module.exports = service;
 
-function authenticate(username, password) {
+function authenticate(email, password) {
   var deferred = Q.defer();
 
-  usersDb.findOne({ username: username }, function (err, user) {
+  usersDb.findOne({ email: email }, function (err, user) {
     if (err) deferred.reject(err);
 
     if (user && bcrypt.compareSync(password, user.hash)) {
@@ -67,12 +59,12 @@ function create(userParam) {
   var deferred = Q.defer();
 
   // Validation
-  usersDb.findOne({ username: userParam.username },function (err, user) {
+  usersDb.findOne({ email: userParam.email },function (err, user) {
     if (err) deferred.reject(err);
 
     if (user) {
-    // The username already exists
-      deferred.reject('Username "' + userParam.username + '" is already taken');
+    // The email already exists
+      deferred.reject('Email "' + userParam.email + '" is already taken');
     } else {
       createUser();
     }
@@ -101,14 +93,14 @@ function update(_id, userParam) {
   usersDb.findById(_id, function (err, user) {
     if (err) deferred.reject(err);
 
-    if (user.username !== userParam.username) {
-      // Username has changed, check if the new username is already taken
-      usersDb.findOne({ username: userParam.username }, function (err, user) {
+    if (user.email !== userParam.email) {
+      // Email has changed, check if the new email is already taken
+      usersDb.findOne({ email: userParam.email }, function (err, user) {
         if (err) deferred.reject(err);
 
         if (user) {
-          // Username already exists
-          deferred.reject('Username "' + req.body.username + '" is already taken')
+          // email already exists
+          deferred.reject('Email "' + req.body.email + '" is already taken')
         } else {
           updateUser();
         }
@@ -123,7 +115,7 @@ function update(_id, userParam) {
     var set = {
       firstName: userParam.firstName,
       lastName: userParam.lastName,
-      username: userParam.username,
+      email: userParam.email,
     };
 
     // Update password if it was entered
