@@ -16,6 +16,7 @@ label {
 
 input[type=checkbox] {
   margin-bottom: 5px;
+  margin-left: 5px;
   zoom:1.2;
 }
 
