@@ -70,28 +70,6 @@ function create(userParam) {
     return regex.test(password);
   }
 
-  // ensure a valid email address is input
-  if (!validateEmail(userParam.email)) {
-    deferred.reject('Email "' + userParam.email + '" is not valid');
-  }
-
-  // ensure a valid password is input
-  if (!validateEmail(userParam.password)) {
-    deferred.reject('Password must contain one uppercase, one lowercase, one digit and be at least 8 characters long');
-  }
-
-  // Server side validation - check if email already exists
-  usersDb.findOne({ email: userParam.email },function (err, user) {
-    if (err) deferred.reject(err);
-
-    if (user) {
-      // The email address already exists
-      deferred.reject('Email "' + userParam.email + '" is already taken');
-    } else {
-      createUser();
-    }
-  });
-
   function createUser() {
     // Set the user object to userParam without the cleartext password
     var user = _.omit(userParam, 'password');
@@ -102,6 +80,27 @@ function create(userParam) {
     usersDb.insert(user, function (err, doc) {
       if (err) deferred.reject(err);
       deferred.resolve();
+    });
+  }
+
+  // ensure a valid email address is input
+  if (!validateEmail(userParam.email)) {
+    deferred.reject('Email "' + userParam.email + '" is not valid');
+  }
+  // ensure a valid password is input
+  else if (!validatePassword(userParam.password)) {
+    deferred.reject('Password must contain one uppercase, one lowercase, one digit and be at least 8 characters long');
+  } else {
+    // Server side validation - check if email already exists
+    usersDb.findOne({ email: userParam.email },function (err, user) {
+      if (err) deferred.reject(err);
+
+      if (user) {
+        // The email address already exists
+        deferred.reject('Email "' + userParam.email + '" is already taken');
+      } else {
+        createUser();
+      }
     });
   }
 
