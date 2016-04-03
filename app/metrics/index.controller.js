@@ -45,9 +45,29 @@
       total = 0;
     }
 
-    $scope.labels = uniqueStatus;
-    $scope.data = uniqueStatusCount;
-    $scope.colours = ['#DC143C', '#FFC200', '#00FF00'];
+    // Get each date
+    var dates = [];
+    angular.forEach(results, function(item) {
+      dates.push(item.date);
+    });
+
+    var rowCount = [];
+    angular.forEach(results, function(item) {
+      rowCount.push(item.row_count);
+    });
+
+    var newRowCount = [];
+    newRowCount.push(rowCount);
+
+    // Get each of the corresponding row counts
+
+    $scope.statusLabels = uniqueStatus;
+    $scope.statusData = uniqueStatusCount;
+    $scope.colours = ['#FF8080', '#FFB84D', '#79D279'];
+
+    $scope.dateLabels = dates;
+    $scope.rowCountData = newRowCount;
+    $scope.series = ['Weeks'];
 
     $scope.onClick = function (points, evt) {
       console.log(points, evt);

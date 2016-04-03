@@ -21,20 +21,18 @@ input[type=checkbox] {
 }
 
 footer {
-  background: #ecf0f1;
-  text-align: center;
+ background: #ecf0f1;
+ text-align: center;
 }
 
 .table_red {
-  background: #DC143C;
+  background: #FF8080;
 }
-
 .table_amber {
-  background: #FFC200;
+  background: #FFB84D;
 }
-
 .table_green {
-  background: #00FF00;
+  background: #79D279;
 }
 
 .flash-message {

@@ -1,21 +1,22 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Doughnut Chart Showing 30 Most Recent Job Runs</h3>
+    <h3 class="panel-title">Doughnut Chart Showing 20 Most Recent Job Runs</h3>
   </div>
   <div class="panel-body">
     <canvas id="doughnut" class="chart chart-doughnut"
-      chart-data="data" chart-labels="labels" chart-colours="colours" chart-legend="true">
+      chart-data="statusData" chart-labels="statusLabels" chart-colours="colours" chart-legend="true">
     </canvas>
   </div>
 </div>
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Pie Chart Showing 30 Most Recent Job Runs</h3>
+    <h3 class="panel-title">Line Chart Showing Row Count Of 20 Most Recent Job Runs</h3>
   </div>
   <div class="panel-body">
-    <canvas id="pie" class="chart chart-pie"
-      chart-data="data" chart-labels="labels" chart-colours="colours" chart-legend="true">
+    <canvas id="line" class="chart chart-line" chart-data="rowCountData"
+      chart-labels="dateLabels" chart-legend="true" chart-series="series"
+      chart-click="onClick" >
     </canvas>
   </div>
 </div>
