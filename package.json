@@ -1,5 +1,5 @@
 {
-  "name": "data-warehouse-app",
+  "name": "data-warehouse-appication",
   "description": "Front end for a Datawarehouse Application",
   "dependencies": {
     "bcryptjs": "^2.1.0",
