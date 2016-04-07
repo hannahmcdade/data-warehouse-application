@@ -42,7 +42,7 @@
     function Error(message, keepAfterLocationChange){
       $rootScope.flash = {
         message: message,
-        type: 'error',
+        type: 'danger',
         keepAfterLocationChange: keepAfterLocationChange
       };
     }
