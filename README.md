@@ -7,5 +7,4 @@ Please install both NodeJS and MongoDB to run the application.
 
 Then in the command line...
 - To start the MongoDB server: mongod
-- To start the MongoDB shell: mongo
 - To start the node server: node server.js
