@@ -23,7 +23,7 @@
       <td>Date Ran</td>
     </tr>
 
-    <tr data-ng-repeat="result in rs = (results | orFilter:filter | orderBy:'date')"
+    <tr data-ng-repeat="result in rs = (results | orFilter:filter | orderBy:'date':true)"
         ng-class="{
           table_red: result.status == 'Erred',
           table_green: result.status == 'Complete',
