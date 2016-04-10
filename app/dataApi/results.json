@@ -1,20 +1,20 @@
 [
   {
-    "status": "Erred",
+    "status": "Complete",
     "row_count": 179,
-    "files_distributed": "N/A",
+    "files_distributed": "Yes",
     "date": "2015-11-19"
   },
   {
     "status": "Overridden",
     "row_count": 159,
-    "files_distributed": "N/A",
+    "files_distributed": "No",
     "date": "2015-11-26"
   },
   {
     "status": "Erred",
     "row_count": 116,
-    "files_distributed": "N/A",
+    "files_distributed": "No",
     "date": "2015-12-03"
   },
   {
@@ -26,7 +26,7 @@
   {
     "status": "Complete",
     "row_count": 115,
-    "files_distributed": "N/A",
+    "files_distributed": "Yes",
     "date": "2015-12-17"
   },
   {
@@ -38,17 +38,17 @@
   {
     "status": "Overridden",
     "row_count": 128,
-    "files_distributed": "N/A",
+    "files_distributed": "No",
     "date": "2016-01-07"
   },
   {
     "status": "Overridden",
     "row_count": 131,
-    "files_distributed": "Yes",
+    "files_distributed": "No",
     "date": "2016-01-14"
   },
   {
-    "status": "Erred",
+    "status": "Complete",
     "row_count": 180,
     "files_distributed": "Yes",
     "date": "2016-01-21"
@@ -56,23 +56,23 @@
   {
     "status": "Erred",
     "row_count": 144,
-    "files_distributed": "Yes",
+    "files_distributed": "No",
     "date": "2016-01-28"
   },
   {
-    "status": "Erred",
+    "status": "Complete",
     "row_count": 164,
     "files_distributed": "Yes",
     "date": "2016-02-04"
   },
   {
-    "status": "Erred",
+    "status": "Complete",
     "row_count": 177,
     "files_distributed": "Yes",
     "date": "2016-02-11"
   },
   {
-    "status": "Erred",
+    "status": "Complete",
     "row_count": 172,
     "files_distributed": "Yes",
     "date": "2016-02-18"
@@ -80,7 +80,7 @@
   {
     "status": "Overridden",
     "row_count": 188,
-    "files_distributed": "Yes",
+    "files_distributed": "No",
     "date": "2016-02-25"
   },
   {
@@ -90,31 +90,31 @@
     "date": "2016-03-03"
   },
   {
-    "status": "Erred",
+    "status": "Complete",
     "row_count": 151,
     "files_distributed": "Yes",
     "date": "2016-03-10"
   },
   {
-    "status": "Erred",
+    "status": "Complete",
     "row_count": 128,
-    "files_distributed": "N/A",
+    "files_distributed": "Yes",
     "date": "2016-03-17"
   },
   {
     "status": "Erred",
     "row_count": 196,
-    "files_distributed": "Yes",
+    "files_distributed": "No",
     "date": "2016-03-24"
   },
   {
     "status": "Overridden",
     "row_count": 160,
-    "files_distributed": "Yes",
+    "files_distributed": "No",
     "date": "2016-04-07"
   },
   {
-    "status": "Erred",
+    "status": "Complete",
     "row_count": 129,
     "files_distributed": "Yes",
     "date": "2016-04-14"

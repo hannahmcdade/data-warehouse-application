@@ -63,7 +63,7 @@
 
     $scope.statusLabels = uniqueStatus;
     $scope.statusData = uniqueStatusCount;
-    $scope.colours = ['#FF8080', '#FFB84D', '#79D279'];
+    $scope.colours = ['#79D279', '#FFB84D', '#FF8080'];
 
     $scope.dateLabels = dates;
     $scope.rowCountData = newRowCount;
