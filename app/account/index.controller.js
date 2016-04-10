@@ -42,7 +42,7 @@
           } else {
             // Server side validation - update user profile. Check for other errors.
             UserService.Update(vm.user).then(function () {
-              FlashService.Success('User updated');
+              FlashService.Success('Account updated');
             }).catch(function (error) {
               FlashService.Error(error);
             });
