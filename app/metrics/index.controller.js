@@ -67,7 +67,7 @@
 
     $scope.dateLabels = dates;
     $scope.rowCountData = newRowCount;
-    $scope.series = ['Weeks'];
+    $scope.series = ['Number of Transactions Processed'];
 
     $scope.onClick = function (points, evt) {
       console.log(points, evt);
