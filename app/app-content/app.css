@@ -1,4 +1,5 @@
 body {
+  background-color: #ADD8E6;
   padding: 20px 0;
 }
 
@@ -12,6 +13,7 @@ label {
     text-indent: -5px;
     margin-right: 20px;
     margin-bottom: 20px;
+    font-size: 120%;
 }
 
 input[type=checkbox] {
@@ -25,14 +27,28 @@ footer {
  text-align: center;
 }
 
+#red {
+  color:#FF8080;
+}
+#green {
+  color: #79D279;
+}
+#amber {
+  color: #FFB84D;
+}
+
+.table_header {
+  background: #FFF;
+}
+
 .table_red {
   background: #FF8080;
 }
-.table_amber {
-  background: #FFB84D;
-}
 .table_green {
   background: #79D279;
+}
+.table_amber {
+  background: #FFB84D;
 }
 
 .flash-message {

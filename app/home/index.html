@@ -2,13 +2,13 @@
 
   <div class="panel panel-primary">
     <div class="panel-body">
-      <label>Erred:
+      <label id="red">Erred:
         <input type="checkbox" class="checkbox-inline" ng-checked="true" data-ng-click="setFilter('Erred')">
       </label>
-      <label>Complete:
+      <label id="green">Complete:
         <input type="checkbox" class="checkbox-inline" ng-checked="true" data-ng-click="setFilter('Complete')">
       </label>
-      <label>Overridden:
+      <label id="amber">Overridden:
         <input type="checkbox" class="checkbox-inline" ng-checked="true" data-ng-click="setFilter('Overridden')">
       </label>
     </div>
@@ -16,7 +16,7 @@
 
   <table class="table table-bordered">
 
-    <tr>
+    <tr class=table_header>
       <td>Job Status</td>
       <td>Row Count</td>
       <td>File Processes</td>
