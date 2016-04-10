@@ -28,10 +28,9 @@ app.use('/login', require('./controllers/login.controller'));
 app.use('/register', require('./controllers/register.controller'));
 app.use('/app', require('./controllers/app.controller'));
 app.use('/api/users', require('./controllers/api/users.controller'));
-// app.use(express.static('./views/images'));
-// app.use(express.static(__dirname + '/views/images'));
-app.use(express.static(path.join(__dirname, 'views')));
 
+// Serve the statis file
+app.use(express.static(path.join(__dirname, 'views')));
 
 // Make '/app' default route
 app.get('/', function (req, res) {
